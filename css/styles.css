@@ -126,18 +126,17 @@ main h4 {
   right: 10px;
   font-style: italic; 
   font-size: 1.7rem;
-  text-align: right;
 }  
 
 @media screen and (max-width: 700px) {
-  .download-link, .last-updated {
-    position: static;
-    margin-bottom: 10px;
-  }
-
   .download-link-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .download-link, .last-updated {
+    position: static;
+    margin-bottom: 10px;
   }
 }
