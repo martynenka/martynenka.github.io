@@ -1,15 +1,3 @@
-/*
-COLOR PALETTE
-
-Dark green    #3c8453
-Sandy beige   #bcaa96
-Dark gray     #222222
-Light gray    #d3d4d6
-Off-white     #f6f6f6
-*/
-
-/* GLOBAL STYLES */
-
 /* 
   https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
@@ -18,15 +6,30 @@ html {
     font-size: 62.5%; 
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
+  margin: 0;
   font-family: "Roboto Flex", serif;
   font-size: 1.6rem;
   text-align: justify;
   line-height: 1.3;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: "Roboto", serif;
+  color:blue; 
+}
+
+ul, p {
+  margin: 0;
+} 
+
+strong {
+  color:blue;
 }
 
 .content-wrapper {
@@ -42,29 +45,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
   margin-bottom: 30px;
-} 
-
-.contacts p {
-  margin: 0;
 }
 
-.summary p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-} 
-
-h1, h2, h3, h4 {
-  margin: 0;
-  font-family: "Roboto", serif;
-  color:blue; 
-}
-
-strong {
-  color:blue;
+.contacts {
+  display: flex;
+  justify-content: space-between;
 }
 
 main h2, main h3 {
@@ -79,11 +66,6 @@ main h4 {
   margin-bottom: 5px;
 }
 
-.contacts {
-  display: flex;
-  justify-content: space-between;
-}
-
 .work-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -91,7 +73,6 @@ main h4 {
 }
 
 .work-item p {
-  margin: 0;
   text-align: right;
 }
 
@@ -108,10 +89,55 @@ main h4 {
   margin-bottom: 15px;
 }
 
-.education-section p {
-  margin: 0;
-}
-
 .education-section > :nth-child(2n) {
   text-align: right;
+}
+
+.btn {
+  background: blue;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.download-link {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+  .download-link {
+    position: absolute;
+  }
+}
+
+.last-updated {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-style: italic; 
+  font-size: 1.7rem;
+  text-align: right;
+}  
+
+@media screen and (max-width: 700px) {
+  .download-link, .last-updated {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .download-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
